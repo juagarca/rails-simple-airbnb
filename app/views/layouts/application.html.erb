@@ -5,14 +5,19 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+      <!-- Add these line for detecting device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <div class="nav">
-      <p>Simple Airbnb</p>
-      <p>Add Flat</p>
+      <%= link_to 'Simple Airbnb', flats_path  %>
+      <%= link_to 'Add Flat', new_flat_path  %>
     </div>
     <%= yield %>
   </body>

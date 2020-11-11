@@ -1,7 +1,7 @@
 
 <div class="container">
   <h1>All our flats (<%= @flats.count %>)</h1>
-  <div class="cards">
+  <div class='cards d-flex justify-content-between'>
     <% @flats.each do |flat| %>
       <div class="card">
         <div class="top-card">
@@ -11,7 +11,7 @@
           <span>￡ <%= flat.price_per_night %> </span>
         </div>
         <div class="bottom-card">
-          <span>More info</span>
+          <%= link_to 'More info', flat_path(flat.id)  %>
         </div>
       </div>
     <% end %>
